@@ -40,9 +40,9 @@ const Footer: React.FC<FooterProps> = ({ copyrightYear }) => {
 
   return (
     <footer className="mt-6 w-full max-md:max-w-full mb-2 ">
-      <div className="flex gap-5 justify-between items-center px-5 w-full max-md:flex-wrap max-md:max-w-full">
+      <div className="flex gap-5 justify-between items-center  px-2 xl:px-5 w-full max-md:flex-wrap max-md:max-w-full">
         <div className="flex gap-5 self-stretch my-auto text-zinc-400">
-          <p className="grow text-base leading-6">
+          <p className="grow text-xs xl:text-base leading-6">
             © {copyrightYear} Forss Digital. All rights reserved
           </p>
           <FooterLink text="Manage cookies" />
@@ -52,7 +52,7 @@ const Footer: React.FC<FooterProps> = ({ copyrightYear }) => {
             <SocialIcon key={index} src={icon.src} alt={icon.alt} />
           ))}
         </div>
-        <div className="flex gap-5 justify-between self-stretch my-auto text-base text-zinc-400">
+        <div className="flex gap-2 justify-between text-xs xl:text-base text-zinc-400">
           <FooterLink text="Terms and Conditions" />
           <FooterLink text="Privacy Policy" />
         </div>

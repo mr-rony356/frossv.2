@@ -5,7 +5,7 @@ interface FooterLinkProps {
 }
 
 const FooterLink: React.FC<FooterLinkProps> = ({ text }) => (
-  <a href="#" className="justify-center ">{text}</a>
+  <a href="#" className="justify-center text-xs xl:text-base ">{text}</a>
 );
 
 export default FooterLink;

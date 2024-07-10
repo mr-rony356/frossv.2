@@ -10,7 +10,7 @@ const SocialIcon: React.FC<SocialIconProps> = ({ src, alt }) => (
     loading="lazy" 
     src={src} 
     alt={alt}
-    className="shrink-0 w-12" 
+    className="shrink-0  w-10 xl:w-12" 
   />
 );
 

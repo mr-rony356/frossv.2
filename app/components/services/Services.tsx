@@ -5,14 +5,14 @@ import ClientLogos from "../Clientslogo/Logo";
 
 const Services = () => {
   return (
-    <div className="grid-container relative px-6">
+    <div className="grid-container relative">
       <picture className="w-full">
         <source
           srcSet="/folder-services-phone.webp.png"
           media="(max-width: 540px)"
         />
         <source
-          srcSet="/folder-services-tablet.webp"
+          srcSet="/folder-services.webp.png"
           media="(max-width: 1200px)"
         />
         <Image
@@ -26,7 +26,7 @@ const Services = () => {
         />
       </picture>
 
-      <div className="absolute inset-0 flex pl-4 pt-6">
+      <div className="absolute inset-0 flex  pt-6">
         <ServicesText />
       </div>
     </div>

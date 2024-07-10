@@ -22,7 +22,7 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <nav className="flex flex-col justify-start items-start grow py-2 text-xl text-neutral-100 max-md:mt-10">
+    <nav className="flex flex-col justify-start items-start grow text-xl text-neutral-100">
       {serviceItems.map((item, index) => (
         <motion.div
           key={index}
@@ -32,8 +32,8 @@ const Services: React.FC = () => {
           transition={{ duration: 0.3, delay: index * 0.1 }}
         >
           <p
-            className={`justify-start pt-5 px-5 cursor-pointer${
-              index > 0 ? "pt-5" : ""
+            className={`justify-start px-5 cursor-pointer${
+              index > 0 ? "pt-5 mt-5" : "pt-0 "
             } flex items-start text-neutral-100`}
             onClick={() => index === 0 && setShowOverlay(!showOverlay)}
           >

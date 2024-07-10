@@ -22,11 +22,13 @@ export default function ContactForm() {
   const [projectDetails, setProjectDetails] = useState("");
 
   return (
-    <div className="bg-white p-6 md:p-10 rounded-lg shadow-lg mx-4 md:mx-16 md:my-20 contact">
+    <div className="bg-[url('/assets/contact-mobile.png')] lg:bg-[url('/assets/vector.png')] bg-no-repeat bg-contain xl:bg-cover px-20 py-10 pl-10  rounded-lg shadow-lg contact  bg-white">
+      {" "}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
-        <div className="col-span-3 space-y-6">
-          <h2 className="text-2xl md:text-5xl text-black mb-6 text-center">
-            Ready to discuss <br className="hidden md:inline-block" /> your project with us?
+        <div className="col-span-3  space-y-6">
+          <h2 className="text-2xl md:text-4xl text-black mb-6 text-center md:text-left leading-6">
+            Ready to discuss <br className="hidden md:inline-block" /> your
+            project with us?
           </h2>
           <form className="space-y-4">
             {/* Full Name field */}
@@ -67,7 +69,7 @@ export default function ContactForm() {
             </div>
 
             {/* Privacy Policy */}
-            <div className="flex items-center justify-between md:flex-row flex-col gap-4 pt-20">
+            <div className="flex items-center justify-between md:flex-row flex-col gap-4 pt-10 xl:pt-20">
               <p className="text-gray-500 text-sm md:w-1/2">
                 By sending this form I confirm that I have read and accept the{" "}
                 <a href="#" className="text-[#A54C3D]">
@@ -93,7 +95,7 @@ export default function ContactForm() {
             </div>
           </form>
         </div>
-        <div className="col-span-3 md:col-span-2 bg-gray-50 p-6 rounded-lg">
+        <div className="col-span-3 md:col-span-2 bg-[url(/assets/client-bg.png)]  bg-no-repeat  bg-contain p-4 xl:pr-0 md:p-6 xl:p-10 pb-5 ">
           <div className="flex items-center mb-4">
             <Image
               src="/assets/client.png" // Replace with the actual path to the client's image
@@ -106,12 +108,12 @@ export default function ContactForm() {
               Our clients say
             </h3>
           </div>
-          <hr className="text-gray-600 w-full my-4" />
+          <hr className="text-gray-600 w-[80%] my-4" />
 
           {/* Client feedback slider */}
           <Slider {...settings}>
             {/* Example client feedback slide */}
-            <div className="text-gray-600 mb-6 max-w-64 text-[20px]">
+            <div className="text-gray-600 mb-6 max-w-64  text-[16px] md:text-[18px] xl:text-[20px]">
               The site developed by Forss Digital projected a very premium
               experience, successfully delivering the client's messaging to
               customers. Despite external challenges, the team’s performance was
@@ -129,7 +131,8 @@ export default function ContactForm() {
                   <p className="text-gray-500 text-sm">Founder, ChatKitty</p>
                 </div>
               </div>
-            </div>  <div className="text-gray-600 mb-6 max-w-64 text-[20px]">
+            </div>{" "}
+            <div className="text-gray-600 mb-6 max-w-64  text-[16px] md:text-[18px] xl:text-[20px]">
               The site developed by Forss Digital projected a very premium
               experience, successfully delivering the client's messaging to
               customers. Despite external challenges, the team’s performance was
@@ -147,7 +150,8 @@ export default function ContactForm() {
                   <p className="text-gray-500 text-sm">Founder, ChatKitty</p>
                 </div>
               </div>
-            </div>  <div className="text-gray-600 mb-6 max-w-64 text-[20px]">
+            </div>{" "}
+            <div className="text-gray-600 mb-6 max-w-64  text-[16px] md:text-[18px] xl:text-[20px]">
               The site developed by Forss Digital projected a very premium
               experience, successfully delivering the client's messaging to
               customers. Despite external challenges, the team’s performance was

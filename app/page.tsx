@@ -16,7 +16,7 @@ import ScrollProvider from "./components/hero/ClientLayout";
 
 export default function Home() {
   return (
-    <div className="new  flex flex-col gap-20 ">
+    <div className="new  flex flex-col gap-20  px-4 md:px-10 xl:px-20">
       {/* <Hero /> */}
 
       <SelectedWorks />
@@ -24,9 +24,9 @@ export default function Home() {
       <Services />
 
       <ClientLogos />
-      <div className="text-white grid-container md:mx-16 ">
+      <div className="text-white grid-container">
         <div className="flex flex-col md:flex-row justify-between  gap-6">
-          <div className="w-full md:w-3/5">
+          <div className="w-full md:w-2/6 md:pl-12 lg:pl-16 xl:pl-20">
             <Image
               src="/assets/hot-article.png"
               alt="Logo 1"
@@ -35,19 +35,14 @@ export default function Home() {
               className="mx-auto md:mx-0 mt-6"
             />
           </div>
-          <p className="text-xl md:text-3xl w-full text-center md:text-left">
-            <span className="block md:inline text-center md:text-right w-full">
-              The Forss Digital blog is a treasure{" "}
-              <br className="hidden md:inline" />
-            </span>
-            <span className="block md:inline text-center md:text-left">
-              trove of our best technical tips and expert{" "}
-              <br className="hidden md:inline" />
-              knowledge. Here you will discover all the{" "}
-              <br className="hidden md:inline" /> valuable secrets and trends of
-              the IT industry.
-            </span>
-          </p>
+          <div className="w-full md:w-4/6 text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center md:text-left">
+            <p className="md:pl-24">The Forss Digital blog is a treasure</p>
+            <p>
+              trove of our best technical tips and expert knowledge. Here you
+              will discover all the valuable secrets and trends of the IT
+              industry.
+            </p>
+          </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between gap-10 mt-10 md:mt-20 px-4 md:px-0">
           <div className="relative align-center w-full md:w-1/2">
@@ -57,13 +52,13 @@ export default function Home() {
                 src={Crown}
                 alt="Logo 1"
                 width={250}
-                className="absolute md:top-20 -top-5"
+                className="absolute md:top-20 lg:top-0 xl:top-20 -top-5"
               />
-              <p className="text-left absolute bottom-12 md:bottom-20 text-xl md:text-2xl left-4 md:left-10">
+              <p className="text-left absolute bottom-12 md:bottom-16 xl:bottom-20 text-xl md:text-xl xl:text-2xl left-4 md:left-6 xl:left-10">
                 How to build a product — a full guide to the product development
                 process
               </p>
-              <small className="text-left absolute  bottom-4 md:bottom-10 left-4 md:left-10">
+              <small className="text-left absolute  bottom-4 md:bottom-10 left-4 md:left-6 xl:left-10">
                 Development
               </small>
             </div>
@@ -75,12 +70,11 @@ export default function Home() {
                 src={Box}
                 alt="Logo 1"
                 width={250}
-                className="absolute md:top-20 -top-6"
+                className="absolute md:top-20 lg:top-0 xl:top-20 -top-5"
               />
-              <p className="text-left absolute bottom-12 md:bottom-20 text-xl md:text-2xl left-4 md:left-10">
-                Tech stack for web development: how to arrange it correctly
-              </p>
-              <small className="text-left absolute  bottom-4 md:bottom-10 left-4 md:left-10">
+              <p className="text-left absolute bottom-12 md:bottom-16 text-xl md:text-xl xl:text-2xl left-4 md:left-6 xl:left-10">
+              Tech stack for web development: how to arrange it correctly              </p>
+              <small className="text-left absolute  bottom-4 md:bottom-10 left-4 md:left-6 xl:left-10">
                 Development
               </small>
             </div>
@@ -88,15 +82,20 @@ export default function Home() {
         </div>
       </div>
       <ContactForm />
-      <div className=" text-white p-4 md:p-10 md:px-20 flex items-center gap-10 justify-between flex-col md:flex-row">
+      <div className=" text-white  flex items-center gap-10 justify-between flex-col md:flex-row">
         <div className="md:w-3/5">
-          <h1 className="text-4xl md:text-[56px]  mb-4 text-center ">
-            READY TO TAKE <br  className="hidden md:inline-block"/> YOUR BRAND TO THE<br  className="hidden md:inline-block"/> 
+          <h1 className="text-3xl md:text-4xl xl:text-6xl text-center md:text-left">
+            READY TO TAKE  
+            <br  className="hidden md:block" />
+
+            YOUR BRAND
+            TO THE
+            <br  className="hidden md:block" />
             NEXT LEVEL
           </h1>
         </div>
         <div>
-          <p className="mb-6 text-base text-[#CBD7D7]">
+          <p className="mb-4 xl:mb-8 text-sm xl:text-base text-[#CBD7D7]">
             Get started today to see areas of improvement <br /> that will boost
             your brand's potential.
           </p>
@@ -119,7 +118,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-        <MainComponent />
+      <MainComponent />
     </div>
   );
 }

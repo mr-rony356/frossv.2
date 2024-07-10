@@ -1,12 +1,12 @@
 import React from "react";
 
 const Newsletter: React.FC = () => (
-  <section className="flex flex-col py-1 max-md:mt-10 max-md:max-w-full">
-    <h1 className="justify-center px-5 text-2xl  text-neutral-100 max-md:max-w-full">
+  <section className="flex flex-col py-1  max-md:max-w-full">
+    <h1 className="justify-center px-5  text-xl xl:text-2xl  text-neutral-100 max-md:max-w-full">
       Subscribe to our newsletter to stay <br /> in touch with the latest.
     </h1>
     <form
-      className="flex gap-5 justify-between py-3 pr-6 pl-7 mt-16 text-base
+      className="flex gap-5 justify-between py-3 pr-6 pl-7 mt-16 text-base mb-10
      leading-4 border border-solid border-white border-opacity-80 rounded-[316.8px] text-white text-opacity-60
       max-md:flex-wrap max-md:px-5 max-md:mt-10 max-md:max-w-full"
     >
