@@ -22,7 +22,7 @@ export default function ContactForm() {
   const [projectDetails, setProjectDetails] = useState("");
 
   return (
-    <div className="bg-[url('/assets/contact-mobile.png')] lg:bg-[url('/assets/vector.png')] bg-no-repeat bg-contain xl:bg-cover px-20 py-10 pl-10  rounded-lg shadow-lg contact  bg-white">
+    <div className="bg-white lg:bg-transparent lg:bg-[url('/assets/vector.png')] bg-no-repeat bg-contain xl:bg-cover px-20 py-10 pl-10  rounded-lg shadow-lg contact ">
       {" "}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
         <div className="col-span-3  space-y-6">
