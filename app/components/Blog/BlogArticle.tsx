@@ -17,7 +17,7 @@ const BlogArticle: React.FC<BlogArticleProps> = ({ imageSrc, iconSrc, title, cat
           {title}
         </h2>
         {category && (
-          <p className=" mt-6 md:mt-1 8text-xs md:text-sm tracking-wider leading-5 uppercase max-md:max-w-full">
+          <p className=" mt-6 md:mt-8 text-xs md:text-sm tracking-wider leading-5 uppercase max-md:max-w-full">
             {category}
           </p>
         )}

@@ -30,6 +30,9 @@ ls.css */
 .slick-dots {
   display: none !important; /* Using !important to ensure it overrides any other styles */
 }
+.slick-next,.slick-prev {
+  display: none !important; /* Using !important to ensure it overrides any other styles */
+}
 /* Basic input field style */
 .input-field {
   position: relative;

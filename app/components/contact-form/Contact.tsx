@@ -95,8 +95,8 @@ export default function ContactForm() {
             </div>
           </form>
         </div>
-        <div className="col-span-3 md:col-span-2 bg-[url(/assets/client-bg.png)]  bg-no-repeat  bg-contain p-4 xl:pr-0 md:p-6 xl:p-10 pb-5 ">
-          <div className="flex items-center mb-4">
+        <div className="col-span-3 md:col-span-2  pl-4 md:ml-0  bg-[url(/assets/client-bg.png)]  bg-no-repeat  bg-cover md:bg-contain  p-0 py-4 xl:pr-0 md:p-6 xl:p-10 pb-5  ">
+          <div className="flex items-center mb-4 ">
             <Image
               src="/assets/client.png" // Replace with the actual path to the client's image
               alt="Client"
@@ -118,7 +118,7 @@ export default function ContactForm() {
               experience, successfully delivering the client's messaging to
               customers. Despite external challenges, the team’s performance was
               exceptional.
-              <div className="flex items-center">
+              <div className="flex items-center mt-4">
                 <Image
                   src="/assets/arom.webp.png" // Replace with the actual path to the client's image
                   alt="Client"
@@ -137,7 +137,7 @@ export default function ContactForm() {
               experience, successfully delivering the client's messaging to
               customers. Despite external challenges, the team’s performance was
               exceptional.
-              <div className="flex items-center">
+              <div className="flex items-center mt-4">
                 <Image
                   src="/assets/arom.webp.png" // Replace with the actual path to the client's image
                   alt="Client"
@@ -156,7 +156,7 @@ export default function ContactForm() {
               experience, successfully delivering the client's messaging to
               customers. Despite external challenges, the team’s performance was
               exceptional.
-              <div className="flex items-center">
+              <div className="flex items-center mt-4">
                 <Image
                   src="/assets/arom.webp.png" // Replace with the actual path to the client's image
                   alt="Client"

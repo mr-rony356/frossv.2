@@ -29,8 +29,8 @@ export default function Home() {
       <ClientLogos />
       <div className="text-white grid-container">
         <div className="flex flex-col md:flex-row justify-between  gap-6">
-          <div className="md:pl-12 lg:pl-16 xl:pl-20">
-            <div className="flex  justify-center bg-white text-black h-[50px] w-full rounded-[150px] items-center gap-3 px-0 md:px-6" >
+          <div className="md:pl-12 lg:pl-16 xl:pl-20 mx-6  md:mx-0">
+            <div className="flex  justify-center bg-white text-black h-[50px] w-full rounded-[150px] items-center gap-3 px-0 md:px-4 ">
               <span className="justify-center my-auto">HOT ARTICLES</span>
               <img
                 loading="lazy"
@@ -40,14 +40,18 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="w-full md:w-4/6 text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-center md:text-left">
-            <p className="md:pl-24">The Forss Digital blog is a treasure</p>
+          <div className="w-full md:w-4/6 xl:w-4/6  text-2xl md:text-2xl lg:text-2xl xl:text-4xl text-center md:text-left">
             <p>
-              trove of our best technical tips and expert knowledge. Here you
-              will discover all the 
+              {" "}
+              <span className="md:pl-24">
+                The Forss Digital blog is a treasure{" "}
+              </span>
               <br className="hidden md:block" />
-               valuable secrets and trends of the IT
-              industry.
+              trove of our best technical tips and expert  <br className="hidden md:block" /> knowledge. Here you
+              will discover all the
+              <br className="hidden md:block" />
+              valuable secrets and trends of the{" "}
+              <br className="block md:hidden" /> IT industry.
             </p>
           </div>
         </div>
