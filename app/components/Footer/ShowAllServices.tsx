@@ -6,7 +6,7 @@ interface Services {
 }
 
 const ShowAllServices: React.FC = () => {
-  const [showOverlay, setShowOverlay] = useState(false);
+  const [showServices, setShowServices] = useState(false);
 
   const services: Services = {
     Design: [
@@ -49,60 +49,58 @@ const ShowAllServices: React.FC = () => {
   };
 
   return (
-    <section className="relative flex flex-col justify-center py-5  mt-40 xl:mt-72 w-full text-xl text-white border-t border-b border-solid border-white border-opacity-80 max-md:mt-10 max-md:max-w-full">
-      <div className="flex gap-5 justify-center px-5 w-full max-md:flex-wrap max-md:max-w-full">
-        <button
-          className="flex-auto my-auto"
-          onClick={() => setShowOverlay(true)}
+      <motion.section
+        initial={{ marginTop: showServices ? '80px' : '288px' }}
+        animate={{ marginTop: showServices ? '80px' : '288px' }}
+        transition={{ duration: 1 }}
+        className={`transition-transform relative flex flex-col justify-center py-5 ${showServices ? 'min-h-screen' : ''} w-full text-xl text-white border-t border-b border-solid border-white border-opacity-80 max-md:mt-10 max-md:max-w-full`}
+      >
+        <div className="flex gap-5 justify-center px-5 w-full max-md:flex-wrap max-md:max-w-full">        <button
+          className="flex-auto text-left"
+          onClick={() => setShowServices(!showServices)}
         >
-          Show all services
+         Show all services
         </button>
         <button
-          onClick={() => setShowOverlay(true)}
+          onClick={() => setShowServices(!showServices)}
           className="text-3xl bg-white p-4 h-10 w-10 text-black rounded-full flex items-center justify-center"
         >
-          +
+          {showServices ? "−" : "+"}
         </button>
       </div>
 
       <AnimatePresence>
-        {showOverlay && (
+        {showServices && (
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-gray-950 text-white p-6 z-[9999999999] overflow-auto"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 1 }}
+            className="overflow-hidden"
           >
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-bold">Show All Services</h2>
-              <button
-                onClick={() => setShowOverlay(false)}
-                className="text-3xl bg-white p-4 h-10 w-10 text-black rounded-full flex items-center justify-center"
-              >
-                −
-              </button>
-            </div>
-            <div>
-              {Object.keys(services).map((category) => (
-                <div key={category} className="mb-6 md:mb-12">
-                  <h3 className=" text-[18px] xl:text-xl my-4 md:my-8 uppercase text-gray-300">
-                    {category}
-                  </h3>
-                  <div className="list-disc  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-                    {services[category].map((service, index) => (
-                      <p key={index} className="mb-2 text-gray-500 text-sm md:text-base">
-                        {service}
-                      </p>
-                    ))}
+            <div className="p-6 w-full">
+              <div>
+                {Object.keys(services).map((category) => (
+                  <div key={category} className="mb-6 md:mb-12">
+                    <h3 className="text-[18px] xl:text-xl my-4 md:my-8 uppercase text-gray-300">
+                      {category}
+                    </h3>
+                    <div className="list-disc grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                      {services[category].map((service, index) => (
+                        <p key={index} className="mb-2 text-gray-500 text-sm md:text-base">
+                          {service}
+                        </p>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </motion.section>
+
   );
 };
 
